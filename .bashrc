@@ -24,7 +24,7 @@ function vmusic ()
 }
 
 alias ls='ls_extended'
-PS1='[\u@\h \W]\$ '
+export PS1='\W \$ '
 
 # custom aliases
 alias helios='ssh -p 2222 -X -Y s225047@se.ifmo.ru'

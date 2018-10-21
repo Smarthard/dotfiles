@@ -35,6 +35,6 @@ alias helios='ssh -p 2222 -X -Y s225047@se.ifmo.ru'
 alias pg_start='systemctl start postgresql'
 alias pg_status='systemctl status postgresql'
 alias pg_stop='systemctl stop postgresql'
-alias reboot='vmusic_off; reboot'
+alias reboot='vmusic off; reboot'
 alias kbacklight='sudo /usr/local/share/kdb_backlight'
 

@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'https://github.com/scrooloose/nerdtree.git' 
 	Plug 'tikhomirov/vim-glsl'
+	Plug 'vim-airline/vim-airline'
 
 call plug#end()
 

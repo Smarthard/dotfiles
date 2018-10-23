@@ -9,6 +9,18 @@
 GLAVA_PID_PATH=~/.config/glava/pid
 GLAVA_LOG_PATH=~/.config/glava/log
 
+_RED="\[\$(tput setaf 1)\]"
+_WHITE="\[\$(tput setaf 15)\]"
+
+if [[ $UID == 0 ]]; 
+	then
+		INV_COLOR=$_RED
+	else
+		INV_COLOR=$_WHITE
+fi
+
+export PS1='\W '$INV_COLOR'\$ '$_WHITE
+
 # aliases
 
 function vmusic ()
@@ -28,7 +40,6 @@ function vmusic ()
 }
 
 alias ls='ls_extended'
-export PS1='\W \$ '
 
 # custom aliases
 alias helios='ssh -p 2222 -X -Y s225047@se.ifmo.ru'

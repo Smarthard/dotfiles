@@ -10,6 +10,7 @@ GLAVA_PID_PATH=~/.config/glava/pid
 GLAVA_LOG_PATH=~/.config/glava/log
 
 _RED="\[\$(tput setaf 1)\]"
+_YELLOW="\[\$(tput setaf 3)\]"
 _WHITE="\[\$(tput setaf 15)\]"
 
 if [[ $UID == 0 ]]; 
@@ -19,7 +20,7 @@ if [[ $UID == 0 ]];
 		INV_COLOR=$_WHITE
 fi
 
-export PS1='\W '$INV_COLOR'\$ '$_WHITE
+export PS1=$_YELLOW'\W '$INV_COLOR'\$ '$_WHITE
 
 # aliases
 

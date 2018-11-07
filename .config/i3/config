@@ -183,7 +183,7 @@ bar {
 	font pango:UbuntuMono-regular 8
 	position top
 	tray_padding 0
-        status_command bumblebee-status -m time pasink pasource \
+        status_command bumblebee-status -m time pasink pasource layout-xkb \
 					 -p time.format="%a, %b %d - %H:%M"	\
 					 -t gruvbox
 }
@@ -217,4 +217,4 @@ bindsym Print exec "scrot ~/tmp.png && xclip -t image/png -i ~/tmp.png"
 # Wallpapers changer
 exec --no-startup-id ~/wallpapers_changer.sh
 
-exec --no-startup-id gxkb &
+#exec --no-startup-id gxkb &

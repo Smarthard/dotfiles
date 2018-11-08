@@ -183,9 +183,10 @@ bar {
 	font pango:UbuntuMono-regular 8
 	position top
 	tray_padding 0
-        status_command bumblebee-status -m time pasink pasource layout-xkb \
-					 -p time.format="%a, %b %d - %H:%M"	\
-					 -t gruvbox
+        status_command bumblebee-status  -m 	time pasink pasource layout-xkb \
+					 -p 	time.format="%a, %b %d - %H:%M"	\
+						pasink.prefix="k"		\
+					 -t	equilux
 }
 
 ### end of semi-default

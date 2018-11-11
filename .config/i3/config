@@ -45,8 +45,8 @@ bindsym $mod+a exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -183,9 +183,8 @@ bar {
 	font pango:UbuntuMono-regular 8
 	position top
 	tray_padding 0
-        status_command bumblebee-status  -m 	time cmus pasink layout-xkb brightness battery \
-					 -p 	time.format="%a, %b %d - %H:%M"	\
-						pasink.prefix="k"		\
+        status_command bumblebee-status  -m 	time cmus pasink layout-xkb brightness battery 	\
+					 -p 	time.format="%a, %b %d - %H:%M"			\
 					 -t	equilux
 }
 
@@ -216,21 +215,27 @@ for_window [class="^Nautilus$"] floating enable resize set 900 700
 bindsym Print exec "scrot ~/tmp.png && xclip -t image/png -i ~/tmp.png"
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 5 # increase brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease brightness
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 
 # Keyboard brightness controls
-bindsym $mod+F4 exec light -A 34 -s "sysfs/leds/asus::kbd_backlight"
-bindsym $mod+F3 exec light -U 34 -s "sysfs/leds/asus::kbd_backlight"
+bindsym XF86KbdBrightnessUp exec light -A 34 -s "sysfs/leds/asus::kbd_backlight"
+bindsym XF86KbdBrightnessDown exec light -U 34 -s "sysfs/leds/asus::kbd_backlight"
 
 # Wallpapers changer
 exec --no-startup-id ~/wallpapers_changer.sh
 
+# Keyboard layout swith
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 
+# NetworkManager wifi applet
 exec --no-startup-id nm-applet
+
+# Screen lock
+bindsym $mod+l exec betterlockscreen -l blur
+exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -s"

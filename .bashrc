@@ -6,6 +6,10 @@
 [[ $- != *i* ]] && return
 
 # values
+export EDITOR=/usr/bin/vim
+export FOWSH_RIMAGE=/usr/bin/pinta
+export FOWSH_VIMAGE=$FOWSH_RIMAGE
+
 GLAVA_PID_PATH=~/.config/glava/pid
 GLAVA_LOG_PATH=~/.config/glava/log
 
@@ -20,7 +24,7 @@ if [[ $UID == 0 ]];
 		INV_COLOR=$_WHITE
 fi
 
-export PS1=$_YELLOW'\W '$INV_COLOR'\$ '$_WHITE
+export PS1="\n$_YELLOW\W $INV_COLOR\$ $_WHITE"
 
 # aliases
 
@@ -49,4 +53,4 @@ alias pg_status='systemctl status postgresql'
 alias pg_stop='systemctl stop postgresql'
 alias reboot='vmusic off; reboot'
 alias kbacklight='sudo /usr/local/share/kdb_backlight'
-
+alias fow="$HOME/Projects/fowsh/fow.sh"

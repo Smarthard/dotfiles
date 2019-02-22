@@ -9,7 +9,7 @@
 export EDITOR=/usr/bin/vim
 export FOWSH_RIMAGE=/usr/bin/pinta
 export FOWSH_VIMAGE=$FOWSH_RIMAGE
-export FOWSH_VIDEO=/usr/bin/vlc
+export FOWSH_VIDEO=/usr/bin/mpv
 export BROWSER=/usr/bin/firefox
 
 GLAVA_PID_PATH=~/.config/glava/pid

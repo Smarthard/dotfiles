@@ -9,6 +9,8 @@
 export EDITOR=/usr/bin/vim
 export FOWSH_RIMAGE=/usr/bin/pinta
 export FOWSH_VIMAGE=$FOWSH_RIMAGE
+export FOWSH_VIDEO=/usr/bin/vlc
+export BROWSER=/usr/bin/firefox
 
 GLAVA_PID_PATH=~/.config/glava/pid
 GLAVA_LOG_PATH=~/.config/glava/log

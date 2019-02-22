@@ -120,8 +120,6 @@ bindsym $mod+0 workspace $ws10
 bindsym $mod+j workspace next 
 bindsym $mod+k workspace prev
 
-assign [class="Firefox"] $ws2
-
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -168,7 +166,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+Return exec firefox 
-bindsym $mod+b [class="Firefox"] focus
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -194,6 +191,8 @@ bar {
 
 for_window [class=".*"] border pixel 1
 for_window [class="^glava$"] border pixel 0
+
+hide_edge_borders smart
 
 #			border	backgr.	text	indicat	child_border
 client.focused		#333030 #40403e #e8e8e8 #333030 #777070

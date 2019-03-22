@@ -212,7 +212,8 @@ bindsym $mod+Shift+plus  gaps outer all plus  5
 for_window [class="^Nautilus$"] floating enable resize set 900 700
 
 # Screenshots bindings
-bindsym Print exec "scrot ~/tmp.png && xclip -t image/png -i ~/tmp.png"
+bindsym Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+bindsym Shift+Print exec "scrot ~/Screenshots/screenshot-$(date +%F_%T).png"
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
